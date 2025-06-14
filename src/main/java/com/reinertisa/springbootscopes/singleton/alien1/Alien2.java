@@ -2,7 +2,7 @@ package com.reinertisa.springbootscopes.singleton.alien1;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component(value = "alien2")
 public class Alien2 {
     private Long id;
     private String brand;
