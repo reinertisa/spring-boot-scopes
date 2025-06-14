@@ -1,4 +1,4 @@
-package com.reinertisa.springbootscopes.singleton.alien;
+package com.reinertisa.springbootscopes.singleton.alien1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
