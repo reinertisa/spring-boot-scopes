@@ -3,9 +3,9 @@ package com.reinertisa.springbootscopes.singleton.animal2;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component(value = "cat1")
+@Component(value = "cat")
 @Scope(value = "singleton")
-public class Cat extends Animal2 {
+public class Cat extends Animal {
     private Double speed;
 
     public Cat() {
@@ -26,6 +26,10 @@ public class Cat extends Animal2 {
 
     public void setSpeed(Double speed) {
         this.speed = speed;
+    }
+
+    public void sound() {
+        System.out.println("Cat sounds meow...");
     }
 
     @Override

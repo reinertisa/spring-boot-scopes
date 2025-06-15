@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component(value="alien")
+@Component(value = "alien")
 @Scope(value = "singleton")
 public class Alien1 {
     private int id;
     private String name;
-    private Laptop laptop;
+    private final Laptop laptop;
 
     @Autowired
     public Alien1(Laptop laptop) {
@@ -35,10 +35,6 @@ public class Alien1 {
 
     public Laptop getLaptop() {
         return laptop;
-    }
-
-    public void setLaptop(Laptop laptop) {
-        this.laptop = laptop;
     }
 
     public void show() {

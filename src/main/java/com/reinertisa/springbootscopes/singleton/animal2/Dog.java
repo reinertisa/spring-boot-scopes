@@ -3,9 +3,9 @@ package com.reinertisa.springbootscopes.singleton.animal2;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component(value = "dog1")
+@Component(value = "dog")
 @Scope(value = "singleton")
-public class Dog extends Animal2 {
+public class Dog extends Animal {
     private Long biteLevel;
 
     public Dog() {
@@ -27,6 +27,10 @@ public class Dog extends Animal2 {
 
     public void setBiteLevel(Long biteLevel) {
         this.biteLevel = biteLevel;
+    }
+
+    public void sound() {
+        System.out.println("Dog sounds hav...");
     }
 
     @Override

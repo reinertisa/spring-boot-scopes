@@ -59,8 +59,11 @@ public class Alien3 {
     }
 
     public void showLaptops() {
-        System.out.println("Alien3 has the following laptops");
-        laptops.forEach(System.out::println);
+        System.out.println("Alien3-- has the following laptops");
+        if (!laptops.isEmpty()) {
+            laptops.forEach(System.out::println);
+        }
+
     }
 
     @Override

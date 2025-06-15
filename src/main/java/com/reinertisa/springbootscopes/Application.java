@@ -1,105 +1,13 @@
 package com.reinertisa.springbootscopes;
 
-import com.reinertisa.springbootscopes.prototype.service1.ServiceA;
-import com.reinertisa.springbootscopes.prototype.service1.ServiceB;
-import com.reinertisa.springbootscopes.prototype.service2.RepairService1;
-import com.reinertisa.springbootscopes.prototype.service2.RepairService2;
-import com.reinertisa.springbootscopes.singleton.alien1.Alien1;
-import com.reinertisa.springbootscopes.singleton.alien1.Alien2;
-import com.reinertisa.springbootscopes.singleton.alien1.Laptop;
-import com.reinertisa.springbootscopes.singleton.alien2.Alien3;
-import com.reinertisa.springbootscopes.singleton.alien2.Laptop2;
-import com.reinertisa.springbootscopes.singleton.animal.AnimalShelter1;
-import com.reinertisa.springbootscopes.singleton.animal.AnimalShelter2;
-import com.reinertisa.springbootscopes.singleton.animal2.Animal2;
-import com.reinertisa.springbootscopes.singleton.animal2.Cat;
-import com.reinertisa.springbootscopes.singleton.animal2.Dog;
-import com.reinertisa.springbootscopes.singleton.animal2.Person1;
-import com.reinertisa.springbootscopes.singleton.email.AlertService;
-import com.reinertisa.springbootscopes.singleton.email.NotificationService;
-import com.reinertisa.springbootscopes.singleton.email.TestingService;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-import java.util.Arrays;
-import java.util.List;
 
 @SpringBootApplication
 public class Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-    }
-
-    @Bean
-    CommandLineRunner commandLineRunner(NotificationService notificationService,
-                                        AlertService alertService,
-                                        TestingService testingService,
-                                        ServiceA serviceA,
-                                        ServiceB serviceB,
-                                        AnimalShelter1 shelter1,
-                                        AnimalShelter2 shelter2,
-                                        RepairService1 repairService1,
-                                        RepairService2 repairService2,
-                                        Alien1 alien,
-                                        Laptop laptop,
-                                        Alien2 alien2,
-                                        Alien3 alien3,
-                                        Person1 person1) {
-        return args -> {
-            notificationService.notifyUser();
-            alertService.sendAlert();
-            testingService.sendAllNotifications();
-            serviceA.usePrototypeBean();
-            serviceB.usePrototypeBean();
-            shelter1.sendEmail("isa", "sade", "hi");
-            shelter2.sendEmail("kristi", "sade", "hello");
-
-            repairService1.displayLaptopConfig();
-            repairService1.setLaptopConfiguration();
-            repairService1.displayLaptopConfig();
-
-            repairService2.displayLaptop();
-            repairService2.setLaptopConfig();
-            repairService2.displayLaptop();
-
-            laptop.setId(10L);
-            laptop.setBrand("Toshiba");
-            alien.setLaptop(laptop);
-            alien.show();
-
-            laptop.setId(29L);
-            laptop.setBrand("Sony");
-            alien.show();
-
-            // laptop bean has mutable state so alien2 will print alien1 changes.
-            // this could end up with cross-contaminated state, especially bad in
-            // multithreaded environments like web apps,
-            // so go with prototype scope or make alien stateless.
-            alien2.show();
-
-
-            Laptop2 laptop1 = new Laptop2(1L, "Sony", "V1");
-            Laptop2 laptop2 = new Laptop2(2L, "Dell", "V2");
-            Laptop2 laptop3 = new Laptop2(3L, "IBM", "V3");
-
-            alien3.setLaptops(Arrays.asList(laptop1, laptop2, laptop3));
-
-            alien3.showLaptops();
-
-            Animal2 animal1 = new Cat(1L, "Rosy", 20D);
-            Animal2 animal2 = new Cat(2L, "Meow", 23d);
-            Animal2 animal3 = new Dog(3L, "Inigo", 3L);
-            Animal2 animal4 = new Dog(4L, "Fezzik", 2L);
-
-            List<Animal2> animals = List.of(animal1, animal2, animal3, animal4);
-            person1.setAnimals(animals);
-
-            person1.showAnimals();
-
-        };
     }
 
 }

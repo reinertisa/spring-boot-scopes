@@ -1,10 +1,5 @@
 package com.reinertisa.springbootscopes.singleton.alien2;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
-@Component(value = "lap2")
-@Scope(value = "singleton")
 public class Laptop2 {
     private Long lid;
     private String brand;

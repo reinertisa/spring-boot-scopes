@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AnimalShelter2 {
+
     private final EmailSender emailSender;
 
     public AnimalShelter2(EmailSender emailSender) {

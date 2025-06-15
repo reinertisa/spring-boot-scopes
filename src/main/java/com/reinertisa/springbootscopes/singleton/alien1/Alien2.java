@@ -1,12 +1,14 @@
 package com.reinertisa.springbootscopes.singleton.alien1;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component(value = "alien2")
+@Scope("singleton")
 public class Alien2 {
     private Long id;
     private String brand;
-    private Laptop laptop;
+    private final Laptop laptop;
 
     public Alien2(Laptop laptop) {
         this.laptop = laptop;
@@ -32,9 +34,6 @@ public class Alien2 {
         return laptop;
     }
 
-    public void setLaptop(Laptop laptop) {
-        this.laptop = laptop;
-    }
 
     public void show() {
         laptop.display();
