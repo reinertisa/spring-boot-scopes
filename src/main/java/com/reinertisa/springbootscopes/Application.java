@@ -11,6 +11,10 @@ import com.reinertisa.springbootscopes.singleton.alien2.Alien3;
 import com.reinertisa.springbootscopes.singleton.alien2.Laptop2;
 import com.reinertisa.springbootscopes.singleton.animal.AnimalShelter1;
 import com.reinertisa.springbootscopes.singleton.animal.AnimalShelter2;
+import com.reinertisa.springbootscopes.singleton.animal2.Animal2;
+import com.reinertisa.springbootscopes.singleton.animal2.Cat;
+import com.reinertisa.springbootscopes.singleton.animal2.Dog;
+import com.reinertisa.springbootscopes.singleton.animal2.Person1;
 import com.reinertisa.springbootscopes.singleton.email.AlertService;
 import com.reinertisa.springbootscopes.singleton.email.NotificationService;
 import com.reinertisa.springbootscopes.singleton.email.TestingService;
@@ -20,6 +24,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.util.Arrays;
+import java.util.List;
 
 @SpringBootApplication
 public class Application {
@@ -41,7 +46,8 @@ public class Application {
                                         Alien1 alien,
                                         Laptop laptop,
                                         Alien2 alien2,
-                                        Alien3 alien3) {
+                                        Alien3 alien3,
+                                        Person1 person1) {
         return args -> {
             notificationService.notifyUser();
             alertService.sendAlert();
@@ -83,6 +89,15 @@ public class Application {
 
             alien3.showLaptops();
 
+            Animal2 animal1 = new Cat(1L, "Rosy", 20D);
+            Animal2 animal2 = new Cat(2L, "Meow", 23d);
+            Animal2 animal3 = new Dog(3L, "Inigo", 3L);
+            Animal2 animal4 = new Dog(4L, "Fezzik", 2L);
+
+            List<Animal2> animals = List.of(animal1, animal2, animal3, animal4);
+            person1.setAnimals(animals);
+
+            person1.showAnimals();
 
         };
     }
