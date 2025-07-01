@@ -2,11 +2,13 @@ package com.reinertisa.springbootscopes.prototype.student;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.ApplicationContext;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
 @Component
+@Order(3)
 public class AppStudentRunner implements CommandLineRunner {
     private final ApplicationContext context;
     private final Student student;
