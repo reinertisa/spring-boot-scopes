@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 
 @Configuration
-@Order(2)
+@Order(200)
 public class ServiceConfig2 {
 
     @Bean(name = "service-2")

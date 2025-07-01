@@ -1,9 +1,11 @@
 package com.reinertisa.springbootscopes.prototype.user;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
+@Order(1)
 public class AppUserRunner implements CommandLineRunner {
     private final User user;
     private final MyPhoneConfig myPhoneConfig;
