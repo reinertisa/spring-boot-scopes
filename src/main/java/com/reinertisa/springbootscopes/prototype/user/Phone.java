@@ -1,18 +1,18 @@
-package com.reinertisa.springbootscopes.prototype.laptop1;
+package com.reinertisa.springbootscopes.prototype.user;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("laptop6")
+@Component("phone1")
 @Scope("prototype")
-public class Laptop {
+public class Phone {
     private String brand;
     private String model;
 
-    public Laptop() {
+    public Phone() {
     }
 
-    public Laptop(String brand, String model) {
+    public Phone(String brand, String model) {
         this.brand = brand;
         this.model = model;
     }
@@ -35,7 +35,7 @@ public class Laptop {
 
     @Override
     public String toString() {
-        return "Laptop{" +
+        return "Phone{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 '}';
