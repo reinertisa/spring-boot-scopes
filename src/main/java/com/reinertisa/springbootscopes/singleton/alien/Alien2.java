@@ -1,16 +1,17 @@
-package com.reinertisa.springbootscopes.singleton.alien1;
+package com.reinertisa.springbootscopes.singleton.alien;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component(value = "lap")
-@Scope(value = "singleton")
-public class Laptop {
+@Component(value = "alien2")
+@Scope("singleton")
+public class Alien2 {
     private Long id;
     private String brand;
+    private final Laptop laptop;
 
-    public Laptop() {
-        System.out.println("Laptop created");
+    public Alien2(Laptop laptop) {
+        this.laptop = laptop;
     }
 
     public Long getId() {
@@ -29,15 +30,21 @@ public class Laptop {
         this.brand = brand;
     }
 
-    public void display() {
-        System.out.println("id: " + id + "--" + brand);
+    public Laptop getLaptop() {
+        return laptop;
+    }
+
+
+    public void show() {
+        laptop.display();
     }
 
     @Override
     public String toString() {
-        return "Laptop{" +
+        return "Alien2{" +
                 "id=" + id +
                 ", brand='" + brand + '\'' +
+                ", laptop=" + laptop +
                 '}';
     }
 }

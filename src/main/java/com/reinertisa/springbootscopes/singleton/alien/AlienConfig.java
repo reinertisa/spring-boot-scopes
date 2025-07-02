@@ -1,4 +1,4 @@
-package com.reinertisa.springbootscopes.singleton.alien1;
+package com.reinertisa.springbootscopes.singleton.alien;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 
 @Configuration
-@Order(5)
-public class AlienConfig1 {
+@Order(8)
+public class AlienConfig {
 
     @Bean
     CommandLineRunner run(Alien1 alien1, Alien2 alien2, Laptop laptop) {
