@@ -3,7 +3,7 @@ package com.reinertisa.springbootscopes.prototype.user;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("phone1")
+@Component("phone")
 @Scope("prototype")
 public class Phone {
     private String brand;

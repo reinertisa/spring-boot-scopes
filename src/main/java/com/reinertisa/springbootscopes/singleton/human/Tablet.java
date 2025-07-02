@@ -1,14 +1,14 @@
-package com.reinertisa.springbootscopes.singleton.alien2;
+package com.reinertisa.springbootscopes.singleton.human;
 
-public class Laptop2 {
+public class Tablet {
     private Long lid;
     private String brand;
     private String model;
 
-    public Laptop2() {
+    public Tablet() {
     }
 
-    public Laptop2(Long lid, String brand, String model) {
+    public Tablet(Long lid, String brand, String model) {
         this.lid = lid;
         this.brand = brand;
         this.model = model;
@@ -45,7 +45,7 @@ public class Laptop2 {
 
     @Override
     public String toString() {
-        return "Laptop2{" +
+        return "Tablet{" +
                 "lid=" + lid +
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
