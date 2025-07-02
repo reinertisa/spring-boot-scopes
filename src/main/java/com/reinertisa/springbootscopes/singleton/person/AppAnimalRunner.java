@@ -1,12 +1,14 @@
-package com.reinertisa.springbootscopes.singleton.animal2;
+package com.reinertisa.springbootscopes.singleton.person;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
 @Component("animalRunner")
+@Order(10)
 public class AppAnimalRunner implements CommandLineRunner {
 
     private final Animal animal1;

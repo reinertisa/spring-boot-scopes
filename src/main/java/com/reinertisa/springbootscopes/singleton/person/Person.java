@@ -1,4 +1,4 @@
-package com.reinertisa.springbootscopes.singleton.animal2;
+package com.reinertisa.springbootscopes.singleton.person;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

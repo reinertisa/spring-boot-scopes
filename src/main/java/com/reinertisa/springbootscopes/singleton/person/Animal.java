@@ -1,4 +1,4 @@
-package com.reinertisa.springbootscopes.singleton.animal2;
+package com.reinertisa.springbootscopes.singleton.person;
 
 
 public class Animal {
