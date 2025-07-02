@@ -5,7 +5,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
-@Order(4)
+@Order(9)
 public class AppAnimalRunner implements CommandLineRunner {
     private final AnimalShelter1 animalShelter1;
     private final AnimalShelter2 animalShelter2;
