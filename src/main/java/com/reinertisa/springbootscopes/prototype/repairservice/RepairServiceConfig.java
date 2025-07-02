@@ -1,4 +1,4 @@
-package com.reinertisa.springbootscopes.prototype.service2;
+package com.reinertisa.springbootscopes.prototype.repairservice;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 
 @Configuration
-@Order(200)
-public class ServiceConfig2 {
+@Order(5)
+public class RepairServiceConfig {
 
-    @Bean(name = "service-2")
+    @Bean(name = "repairService")
     CommandLineRunner commandLineRunner(RepairService1 repairService1, RepairService2 repairService2) {
         return args -> {
           repairService1.setLaptopConfiguration();

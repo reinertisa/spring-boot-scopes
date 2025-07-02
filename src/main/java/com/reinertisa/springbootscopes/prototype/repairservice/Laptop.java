@@ -1,4 +1,4 @@
-package com.reinertisa.springbootscopes.prototype.service2;
+package com.reinertisa.springbootscopes.prototype.repairservice;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

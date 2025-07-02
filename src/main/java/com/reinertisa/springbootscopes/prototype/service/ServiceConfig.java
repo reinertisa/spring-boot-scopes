@@ -1,4 +1,4 @@
-package com.reinertisa.springbootscopes.prototype.service1;
+package com.reinertisa.springbootscopes.prototype.service;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 
 @Configuration
-@Order(100)
-public class ServiceConfig1 {
+@Order(4)
+public class ServiceConfig {
 
     @Bean("serviceConfigRunner")
     public CommandLineRunner run(ServiceA serviceA, ServiceB serviceB) {

@@ -1,4 +1,4 @@
-package com.reinertisa.springbootscopes.prototype.service2;
+package com.reinertisa.springbootscopes.prototype.repairservice;
 
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.stereotype.Service;
